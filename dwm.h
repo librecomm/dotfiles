@@ -9,8 +9,8 @@ static const char *fonts[]          = { "monospace:size=8" };
 static const char dmenufont[]       = "monospace:size=8";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { "#FFFFFF", "#000000", "#000000" },
-	[SchemeSel]  = { "#FFFFFF", "#FFFF00", "#FFFF00" },
+	[SchemeNorm] = { "#E0DEF4", "#191724", "#191724" },
+	[SchemeSel]  = { "#E0DEF4", "#F6C177", "#F6C177" },
 };
 
 /* tagging */

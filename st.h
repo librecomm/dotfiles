@@ -96,30 +96,30 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#000000",
-	"#FF0000",
-	"#00FF00",
-	"#FFFF00",
-	"#0000FF",
-	"#FF00FF",
-	"#00FFFF",
-	"#FFFFFF",
+	"#26233A",
+	"#EB6F92",
+	"#9CCFD8",
+	"#F6C177",
+	"#31748F",
+	"#C4A7E7",
+	"#EBBCBA",
+	"#E0DEF4",
 
 	/* 8 bright colors */
-	"#000000",
-	"#FF0000",
-	"#00FF00",
-	"#FFFF00",
-	"#0000FF",
-	"#FF00FF",
-	"#00FFFF",
-	"#FFFFFF",
+	"#6E6A86",
+	"#EB6F92",
+	"#9CCFD8",
+	"#F6C177",
+	"#31748F",
+	"#C4A7E7",
+	"#EBBCBA",
+	"#E0DEF4",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#FFFFFF", /* default foreground colour */
-	"#000000", /* default background colour */
+	"#E0DEF4", /* default foreground colour */
+	"#191724", /* default background colour */
 };
 
 
@@ -146,7 +146,7 @@ static unsigned int cursorshape = 2;
  */
 
 static unsigned int cols = 80;
-static unsigned int rows = 24;
+static unsigned int rows = 25;
 
 /*
  * Default colour and shape of the mouse cursor
@@ -174,7 +174,6 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
@@ -188,16 +187,6 @@ static MouseShortcut mshortcuts[] = {
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
-	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
-	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
-	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
-	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
-	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
-	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
-	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 };
 
