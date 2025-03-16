@@ -37,8 +37,8 @@ static float chscale = 1.0;
 wchar_t *worddelimiters = L" ";
 
 /* selection timeouts (in milliseconds) */
-static unsigned int doubleclicktimeout = 300;
-static unsigned int tripleclicktimeout = 600;
+static unsigned int doubleclicktimeout = 250;
+static unsigned int tripleclicktimeout = 500;
 
 /* alt screens */
 int allowaltscreen = 1;
@@ -60,7 +60,7 @@ static double maxlatency = 16;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-static unsigned int blinktimeout = 800;
+static unsigned int blinktimeout = 750;
 
 /*
  * thickness of underline and bar cursors
@@ -96,7 +96,7 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#26233A",
+	"#191724",
 	"#EB6F92",
 	"#9CCFD8",
 	"#F6C177",
@@ -106,7 +106,7 @@ static const char *colorname[] = {
 	"#E0DEF4",
 
 	/* 8 bright colors */
-	"#6E6A86",
+	"#191724",
 	"#EB6F92",
 	"#9CCFD8",
 	"#F6C177",
